@@ -24,7 +24,6 @@
  @brief Return module ID.
  */
 + (NSString *)getModuleIdentifier;
-
 /*!
  @brief Return status location permissions.
  */
