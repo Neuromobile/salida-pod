@@ -7,14 +7,31 @@ Bellow, you can find the steps below to integrate Salida into your project.
 
 <h2>1. Dependencies</h2>
 
-Firstly, you must add the Salida.framework file into your project. Fristly, go to the "project" file of your iOS project
-and click on the target where you want to integrate this SDK. On the right, in the "General" tab, scroll down and look
-for a section called "Embedded Binaries". Click on the plus (+) button and add the framework.
+The integration of the SDK is done through Pods, for this it is necessary to add the following to the Podfile file:
+
+@code
+    pod 'Salida', :git => 'https://git.compraactiva.me/pods/salida-pod.git', :tag => '1.0.4'
+@endcode
+
+And then perform a "pod install".
+
+<h4>1.1 Capabilities</h4>
+
+In the "Capabilities" section of the target it is necessary to activate the Background Modes and mark the Location Updates and Background Fetch options.
+
+<h4>1.2 Info.plist</h4>
+
+In the info.plist file we must add the following keys:
+
+- Privacy - Motion Usage Description.
+- Privacy - Location Always Usage Description.
+- Privacy - Location When In Use Usage Description.
+- Privacy - Location Always and When In Use Usage Description.
 
 <h2>2. Creating an instance of Salida</h2>
 
 To initialize the Salida framework, you must create an instance of its main class. Calling
-Salida::createInstance. This operation must be done after having initialized the CommonSDK. The code below shows an
+Neuromobile::initWithSecret. This method will initialize the CommonSDK and create the Salida instance. The code below shows an
 example of both calls in a generic AppDelegate class:
 
 @code
@@ -26,10 +43,9 @@ example of both calls in a generic AppDelegate class:
 ...
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Initialize CommonSDK with secret...
     [Neuromobile initWithSecret:@"<your_secret_here>"];
-    // Other CommonSDK operations...
 
-    [Salida createInstance];
     return YES;
 }
 
@@ -37,8 +53,6 @@ example of both calls in a generic AppDelegate class:
 
 @end
 @endcode
-
-To check how to initialize the CommomSDK framework properly, please refer to its documentation.
 
 <h2>3. Getting location notifications</h2>
 
