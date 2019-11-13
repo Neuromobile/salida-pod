@@ -50,6 +50,16 @@
 +(BOOL)isLocationActive;
 
 /*!
+@brief Return Building where user is inside.
+*/
++(NMSBuilding *)getBuildingSaved;
+
+/*!
+ @brief Return if only allow change coupon inside building.
+ */
++(BOOL)changeCouponInsideBuilding;
+
+/*!
  @brief Return status In Out.
  */
 +(BOOL)getLastInOutStatus;
