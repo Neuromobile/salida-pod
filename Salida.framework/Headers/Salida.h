@@ -64,9 +64,19 @@
 +(BOOL)changeCouponInsideBuilding;
 
 /*!
+@brief Return if optional data are enabled.
+*/
++(BOOL)optionalDataEnabled;
+
+/*!
  @brief Return status In Out.
  */
 +(BOOL)getLastInOutStatus;
+
+/*!
+@brief Set Config
+*/
++(void)setSpcConfig:(NSString *)config;
 /*!
  @brief Call this method in applicationWillEnterForeground from AppDelegate.
  */
