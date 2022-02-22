@@ -54,10 +54,6 @@
 @brief Remove Building where user close session.
 */
 +(void)removeBuildingSaved;
-/*!
- @brief Return if only allow change coupon inside building.
- */
-+(BOOL)changeCouponInsideBuilding;
 
 /*!
 @brief Return if optional data are enabled.

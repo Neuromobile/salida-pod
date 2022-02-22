@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Salida"
-  s.version      = "1.6.0"
+  s.version      = "1.6.1"
   s.summary      = "A short description of Salida."
 
   # This description is used to generate tags and improve search results.
