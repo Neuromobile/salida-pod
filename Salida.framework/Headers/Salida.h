@@ -1,8 +1,15 @@
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 // In this header, you should import all the public headers of your framework using statements like #import <Salida/PublicHeader.h>
 
 #import <Salida/NMSBuilding.h>
+
+typedef NS_ENUM(NSInteger, LocationStatus) {
+    OK = 0,
+    REQUEST = 1,
+    DENIED = 2
+};
 
 /*!
  @brief Salida's public inteface
@@ -39,7 +46,18 @@
  @brief Recopile data about SDK status.
  */
 +(void)shouldBeDetectedInside;
-
+/*!
+ @brief Is Location Enabled  to redeemCoupon
+ */
++(BOOL)isGPSEnabledToRedeemCoupon;
+/*!
+ @brief Force location Update
+ */
++(LocationStatus)forceLocationUpdate;
+/*!
+ @brief Get Last Location For Redeem Coupon
+ */
++(CLLocation *)getLastLocationForRedeemCoupon;
 /*!
  @brief Return is location is active.
  */
