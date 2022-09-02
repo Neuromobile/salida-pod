@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Salida"
-  s.version      = "1.6.3"
+  s.version      = "1.6.5"
   s.summary      = "A short description of Salida."
 
   # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "git@code.neuromobile.io:pods/salida-pod.git", :tag => "#{s.version}" }
+  s.source       = { :git => "git@github.com:Neuromobile/salida-pod.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
