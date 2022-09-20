@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Salida"
-  s.version      = "1.6.6"
+  s.version      = "1.6.7"
   s.summary      = "A short description of Salida."
 
   # This description is used to generate tags and improve search results.
@@ -123,7 +123,7 @@ Pod::Spec.new do |s|
   # s.library   = "iconv"
     s.libraries = 'c++', 'stdc++'
     s.ios.vendored_frameworks = 'Salida.framework'
-    s.pod_target_xcconfig = { 'VALID_ARCHS' => 'armv7 armv7s arm64' }
+    s.pod_target_xcconfig = { 'VALID_ARCHS' => 'arm64' }
     s.pod_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES' }
     s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
     s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
