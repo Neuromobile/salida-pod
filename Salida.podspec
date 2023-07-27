@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Salida"
-  s.version      = "1.7.3"
+  s.version      = "1.7.4"
   s.summary      = "A short description of Salida."
 
   # This description is used to generate tags and improve search results.
@@ -138,8 +138,8 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  #s.dependency 'RestKit', '~> 0.27.0'
-  #s.dependency 'JKBigInteger', '~> 0.0.1'
-  #s.dependency 'GZIP', '~> 1.2'
+  s.dependency 'RestKit', '~> 0.27.0'
+  s.dependency 'JKBigInteger', '~> 0.0.1'
+  s.dependency 'GZIP', '~> 1.2'
 
 end
