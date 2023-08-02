@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Salida"
-  s.version      = "1.7.4"
+  s.version      = "1.8.0"
   s.summary      = "A short description of Salida."
 
   # This description is used to generate tags and improve search results.
@@ -68,7 +68,7 @@ Pod::Spec.new do |s|
   # s.platform     = :ios, '12.2' 
   # s.ios.deployment_target = '12.2'
   #  When using multiple platforms 
-  s.ios.deployment_target = "13.0"
+  s.ios.deployment_target = "10.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -121,13 +121,11 @@ Pod::Spec.new do |s|
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
-    s.libraries = 'c++', 'stdc++'
-    s.ios.vendored_frameworks = 'Salida.xcframework'
-    s.source_files = "Salida.xcframework/*/Salida.framework/Headers/*.{h,swift}"
-  # s.pod_target_xcconfig = { 'VALID_ARCHS' => 'arm64' }
-  # s.pod_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES' }
-  # s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  # s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  # s.libraries = 'c++', 'stdc++'
+    s.ios.vendored_frameworks = 'Salida.framework'
+    s.pod_target_xcconfig = { 'VALID_ARCHS' => ' armv7 armv7s arm64 arm64e x86_64' }
+    s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+    s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
