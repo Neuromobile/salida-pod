@@ -1,6 +1,6 @@
 framework module Salida {
   umbrella header "Salida.h"
-
   export *
+
   module * { export * }
 }
